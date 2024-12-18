@@ -1,11 +1,16 @@
 Package: japanbiodiversitydashboard
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Japan Biodiversity Dashboard
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: João Gabriel Oliveira
+Maintainer: João Gabriel Oliveira <jgolivjesus@gmail.com>
+Description: R/Shiny application to visualize biodiversity data from Japan observations.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Depends:
+    dplyr,
+    shiny,
+    bslib,
+    shinyWidgets,
+    echarts4r
