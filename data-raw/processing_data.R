@@ -32,7 +32,8 @@ occurrence <-
   occurrence |>
   janitor::clean_names() |>
   mutate(
-    name = ifelse(vernacular_name %in% "", scientific_name, paste0(scientific_name, " - ", vernacular_name))
+    vernacular_name = ifelse(is.na(vernacular_name), "", vernacular_name)
+    ,name = ifelse(vernacular_name %in% "", scientific_name, paste0(scientific_name, " - ", vernacular_name))
     ,day = event_date |> lubridate::as_date()
     ,time = ifelse(is.na(event_time), "-", event_time)
     ,year = day %>% lubridate::floor_date("year")

@@ -10,7 +10,15 @@ Encoding: UTF-8
 LazyData: true
 Depends:
     dplyr,
+    tidyr,
     shiny,
     bslib,
     shinyWidgets,
-    echarts4r
+    echarts4r,
+    reactable,
+    reactablefmtr,
+    waiter,
+    glue,
+    leaflet,
+    leaflet.extras,
+    lubridate

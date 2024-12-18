@@ -1,0 +1,63 @@
+/* app main font */
+@font-face {
+  font-family: 'FiraSans-Regular';
+  src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* card borders */
+.custom-card {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 25px;
+}
+
+/* Input ajdustments */
+.bootstrap-select.show-tick .dropdown-menu {
+  max-width: 425px !important;
+  outline: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 15px;
+}
+
+.bootstrap-select>.dropdown-toggle {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 15px;
+  background-color: #ffeef0;
+}
+
+.form-label, .shiny-input-container .control-label {
+  margin-bottom: .5rem;
+  font-size: 14px;
+}
+
+.bootstrap-select .dropdown-menu li a {
+  font-size: 14px;
+}
+
+.noUi-tooltip {
+  border-radius: 4px;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.shiny-input-container:not(.shiny-input-container-inline) {
+  width: 250px;
+  max-width: 100%;
+  height: 60px;
+}
+
+/* leaflet legend */
+.leaflet .legend {
+  line-height: 18px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 20px;
+}

@@ -1,0 +1,17 @@
+.cluster-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.no-background {
+  background: none !important;
+}
+
+.leaflet-marker-icon {
+  background: none !important;
+  border: none !important;
+}
