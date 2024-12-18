@@ -46,7 +46,6 @@ f.scientific_info <- function(x) {
     ~name, ~value,
     "Scientific name:", unique(x$scientific_name),
     "Vernacular name:", unique(x$vernacular_name),
-    "Taxon rank:", unique(x$taxon_rank),
     "Kingdom:", unique(x$kingdom),
     "Family:", unique(x$family)
   )

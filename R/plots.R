@@ -153,7 +153,6 @@ plt.leaflet_add_circle_markers <- function(
         "<div style='flex: 0;'><img src='", url, "' style='max-width: 150px; height: auto;'></div>",
         "</div>"
       )
-      ,label = ~name
       ,radius = ~radius_scale(individual_count)
       ,fillColor = "#f7a1a7"
       ,fillOpacity = 1

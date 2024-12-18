@@ -15,59 +15,68 @@ ui <- function() {
     ,theme = fx.bslib_theme
 
     ,layout_columns(
-      col_widths = c(3, 9)
+      col_widths = c(8, 4)
+      ,gap = "0.5rem"
 
-      ,tagList(
-        card(
-          class = "custom-card"
-          ,height = "48vh"
-          ,plt.intro()
-          ,md.controls_UI()
+      ,layout_columns(
+        col_widths = 12
+        ,gap = "0.5rem"
+
+        ,layout_columns(
+          col_widths = c(4, 8)
+          ,gap = "0.5rem"
+
+          ,card(
+            class = "custom-card"
+            ,plt.intro()
+            ,md.controls_UI()
+          )
+
+          ,layout_columns(
+            col_widths = 12
+            ,gap = "0.5rem"
+
+            ,layout_columns(
+              col_widths = c(4, 8)
+              ,gap = "0.5rem"
+
+              ,card(
+                class = "custom-card"
+                ,full_screen = TRUE
+                ,card_body(
+                  padding = 0
+                  ,md.image_UI()
+                )
+              )
+
+              ,card(
+                class = "custom-card"
+                ,md.info_UI()
+              )
+            )
+
+            ,card(
+              class = "custom-card"
+              ,md.details_UI()
+            )
+          )
         )
 
         ,card(
           class = "custom-card"
-          ,height = "52vh"
+          ,height = "38vh"
           ,md.timeline_UI()
         )
       )
 
-      ,tagList(
-        layout_columns(
-          col_widths = c(2, 4, 6)
-          ,height = "33vh"
-
-          ,card(
-            class = "custom-card"
-            ,full_screen = TRUE
-            ,card_body(
-              padding = 0
-              ,md.image_UI()
-            )
-          )
-
-          ,card(
-            class = "custom-card"
-            ,md.info_UI()
-          )
-
-          ,card(
-            class = "custom-card"
-            ,md.details_UI()
-          )
-        )
-
-        ,card(
-          class = "custom-card"
-          ,height = "67vh"
-          ,card_body(
-            padding = 0
-            ,md.map_UI()
-          )
+      ,card(
+        class = "custom-card"
+        ,card_body(
+          padding = 0
+          ,md.map_UI()
         )
       )
 
     )
-
   )
 }
