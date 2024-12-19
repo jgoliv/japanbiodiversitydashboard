@@ -17,7 +17,7 @@ plt.info <- function(x) {
   col_list <-
     list(
       name = colDef(style = list(fontWeight = "bolder", fontSize = "12px"))
-      ,value = colDef(style = list(fontWeight = "bolder", fontSize = "12px", color = "#f19cb7"))
+      ,value = colDef(style = list(fontWeight = "bolder", fontSize = "12px", color = "#E87A90"))
     )
   plt.base_reactable(x = x, col_list = col_list)
 }
@@ -52,13 +52,13 @@ plt.distribution <- function(x) {
     e_boxplot(
       Count
       ,outliers = FALSE
-      ,itemStyle = list(color = "#ffeef0", borderColor = "#c46479")
+      ,itemStyle = list(color = "#F8C3CD", borderColor = "#E87A90")
     ) |>
     e_title(
       text = "Distribution"
       ,subtext = "Non null yearly individual counts"
-      ,textStyle = list(fontFamily = "FiraSans-Regular", color = "#32444D")
-      ,subtextStyle = list(fontFamily = "FiraSans-Regular", color = "#c46479")
+      ,textStyle = list(fontFamily = "FiraSans-Regular", color = "#333")
+      ,subtextStyle = list(fontFamily = "FiraSans-Regular", color = "#E87A90")
     ) |>
     e_tooltip(trigger = "item", position = "inside") |>
     e_x_axis(type = "value") |>
@@ -80,10 +80,10 @@ plt.timeline <- function(x) {
     e_tooltip(trigger = 'axis') |>
     e_mark_point(data = list(name = "Max", type = "max")) |>
     e_mark_line(data = list(name = "Mean", type = "average"), precision = 0) |>
-    e_toolbox(emphasis = list(iconStyle = list(color = "#c46479", borderColor = "#c46479"))) |>
+    e_toolbox(emphasis = list(iconStyle = list(color = "#E87A90", borderColor = "#E87A90"))) |>
     e_toolbox_feature(feature = "magicType", type = list("line", "bar")) |>
     e_toolbox_feature(feature = "dataZoom") |>
-    e_color(c("#c46479"))
+    e_color(c("#E87A90"))
 }
 
 plt.intro <- function() {
@@ -154,7 +154,7 @@ plt.leaflet_add_circle_markers <- function(
         "</div>"
       )
       ,radius = ~radius_scale(individual_count)
-      ,fillColor = "#f7a1a7"
+      ,fillColor = "#F8C3CD"
       ,fillOpacity = 1
       ,stroke = FALSE
       ,options = markerOptions(

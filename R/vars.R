@@ -1,4 +1,23 @@
-fx.palette <- rev(c("#942d3d", "#a44050", "#b45264", "#c46479", "#d3768d", "#e289a2", "#f19cb7", "#ffafcc"))
+fx.japan_red_colors <-
+  tribble(
+    ~name, ~color,
+    "kuwazome", "#64363C",
+    "ebizome", "#6D2E5B",
+    "ichigo", "#B5495B",
+    "nakabeni", "#DB4D6D",
+    "usubeni", "#E87A90",
+    "momo", "#F596AA",
+    "ikkonzome", "#F4A7B9",
+    "taikoh", "#F8C3CD"
+  )
+
+fx.japan_beige_color <-
+  tribble(
+    ~name, ~color,
+    "shironeri", "#FCFAF2"
+  )
+
+fx.palette <- rev(fx.japan_red_colors$color)
 
 fx.reactable_theme <-
   reactableTheme(
@@ -7,15 +26,16 @@ fx.reactable_theme <-
       fontFamily = "FiraSans-Regular",
       color = "#333",
       fontSize = "14px",
-      fontWeight = "bold"
+      fontWeight = "bold",
+      backgroundColor = fx.japan_beige_color$color
     )
   )
 
 fx.bslib_theme <-
   bs_theme(
     base_font = "FiraSans-Regular"
-    ,primary = "#c46479"
-    ,bg = "#FFFFFF"
+    ,primary = subset(fx.japan_red_colors, name == "usubeni")$color
+    ,bg = fx.japan_beige_color$color
     ,fg = "#333"
   )
 

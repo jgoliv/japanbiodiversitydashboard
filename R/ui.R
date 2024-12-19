@@ -9,7 +9,7 @@ ui <- function() {
     )
 
     ,waiter::use_waiter()
-    ,waiter::waiter_show_on_load(html = fx.preloader, color = "#ffeef0")
+    ,waiter::waiter_show_on_load(html = fx.preloader, color = "#FCFAF2")
 
     ,title = "japanbiodiversitydashboard"
     ,theme = fx.bslib_theme
