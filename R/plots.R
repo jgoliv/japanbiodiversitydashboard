@@ -117,7 +117,7 @@ plt.intro <- function() {
 plt.leaflet_base_map <- function() {
   leaflet() |>
     leaflet(options = leafletOptions(minZoom = 5)) |>
-    setView(lng = 138.2529, lat = 36.2048, zoom = 5) |>
+    setView(lng = 138.2529, lat = 36.2048, zoom = 7) |>
     addProviderTiles(providers$CartoDB.Positron) |>
     addLegend(
       position = "topright"
