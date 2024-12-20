@@ -36,7 +36,7 @@ occurrence <-
     ,name = ifelse(vernacular_name %in% "", scientific_name, paste0(scientific_name, " - ", vernacular_name))
     ,day = event_date |> lubridate::as_date()
     ,time = ifelse(is.na(event_time), "-", event_time)
-    ,year = day %>% lubridate::floor_date("year")
+    ,year = day |> lubridate::floor_date("year")
     ,kingdom = ifelse(kingdom %in% "", "Other", kingdom)
     ,sex = ifelse(is.na(sex), "Unknown", sex |> stringr::str_to_title())
   ) |>
@@ -49,7 +49,7 @@ occurrence <-
 media <-
   multimedia |>
   left_join(
-    occurrence %>% select(id, scientific_name)
+    occurrence |> select(id, scientific_name)
     ,by = "id"
   ) |>
   filter(!is.na(scientific_name)) |>
