@@ -11,23 +11,17 @@ fx.japan_red_colors <-
     "taikoh", "#F8C3CD"
   )
 
-fx.japan_beige_color <-
-  tribble(
-    ~name, ~color,
-    "shironeri", "#FCFAF2"
-  )
-
 fx.palette <- rev(fx.japan_red_colors$color)
 
 fx.reactable_theme <-
   reactableTheme(
-    headerStyle = list(display = "none"),
-    style = list(
-      fontFamily = "FiraSans-Regular",
-      color = "#333",
-      fontSize = "14px",
-      fontWeight = "bold",
-      backgroundColor = fx.japan_beige_color$color
+    headerStyle = list(display = "none")
+    ,style = list(
+      fontFamily = "FiraSans-Regular"
+      ,color = "#333"
+      ,fontSize = "14px"
+      ,fontWeight = "bold"
+      ,backgroundColor = "#FBF9EF"
     )
   )
 
@@ -35,7 +29,7 @@ fx.bslib_theme <-
   bs_theme(
     base_font = "FiraSans-Regular"
     ,primary = subset(fx.japan_red_colors, name == "usubeni")$color
-    ,bg = fx.japan_beige_color$color
+    ,bg = "#FFFFFF"
     ,fg = "#333"
   )
 
