@@ -19,5 +19,4 @@ server <- function(input, output, session) {
   md.details(rc.data = rc.data, rc.controls = rc.controls)
   md.timeline(rc.data = rc.data, rc.controls = rc.controls)
   md.map(rc.data = rc.data)
-
 }

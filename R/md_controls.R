@@ -19,15 +19,9 @@ md.controls <- function(id = "controls", static_data) {
 
     return(
       reactive({
-
         y_init <- input$year[[1]] |> paste0("-01-01") |> as_date() |> floor_date(unit = "years")
         y_end <- input$year[[2]] |> paste0("-01-01") |> as_date() |> floor_date(unit = "years")
-
-        list(
-          year = seq(y_init, y_end, by = "year")
-          ,name = input$name
-        )
-
+        list(year = seq(y_init, y_end, by = "year"), name = input$name)
       })
     )
 

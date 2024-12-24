@@ -35,9 +35,9 @@ wd.pickerInput <- function(
 wd.sliderInput <- function(
     inputId
     ,label = "Select Year:"
-    ,min = 1984
-    ,max = 2020
-    ,value = c(1984, 2020)
+    ,min = 1976
+    ,max = 2024
+    ,value = c(1976, 2024)
     ,step = 1
     ,sep = ""
     ,width = "95%"
