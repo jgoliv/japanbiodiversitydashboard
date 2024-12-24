@@ -35,7 +35,7 @@ fx.bslib_theme <-
 
 fx.preloader = HTML('
   <div class="loading-container">
-    <img src="img/logo.svg" class="spinner">
+    <img src="img/logo.svg" class="floater">
     <div class="loading-text">Loading...</div>
   </div>
 ')
